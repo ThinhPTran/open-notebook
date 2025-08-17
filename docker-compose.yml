@@ -5,6 +5,7 @@ services:
       - ./surreal_data:/mydata
     environment:
       - SURREAL_EXPERIMENTAL_GRAPHQL=true
+      - OLLAMA_BASE_URL="http://localhost:11434"
     command: start --log info --user root --pass root rocksdb:/mydata/mydatabase.db
     pull_policy: always
     user: root
